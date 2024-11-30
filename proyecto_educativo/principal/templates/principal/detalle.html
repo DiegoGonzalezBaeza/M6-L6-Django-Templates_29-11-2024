@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalle de Estudiante{% endblock %}
+
+{% block content %}
+    <h2>{{ estudiante.nombre }} {{ estudiante.apellido }}</h2>
+    <p>Correo: {{ estudiante.correo }}</p>
+    <p>Edad: {{ estudiante.edad }}</p>
+    <p>Fecha de Registro: {{ estudiante.fecha_registro }}</p>
+    <a href="{% url 'home' %}">Volver</a>
+{% endblock %}

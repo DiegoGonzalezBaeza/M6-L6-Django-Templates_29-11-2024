@@ -1,0 +1,30 @@
+python manage.py shell
+from principal.models import Estudiante
+
+estudiantes = [
+    {'nombre': 'Juan', 'apellido': 'Pérez', 'correo': 'juan.perez@gmail.com', 'edad': 20},
+    {'nombre': 'Ana', 'apellido': 'Gómez', 'correo': 'ana.gomez@gmail.com', 'edad': 22},
+    {'nombre': 'Luis', 'apellido': 'Martínez', 'correo': 'luis.martinez@gmail.com', 'edad': 19},
+    {'nombre': 'María', 'apellido': 'Rodríguez', 'correo': 'maria.rodriguez@gmail.com', 'edad': 21},
+    {'nombre': 'Pedro', 'apellido': 'López', 'correo': 'pedro.lopez@gmail.com', 'edad': 23},
+    {'nombre': 'Carla', 'apellido': 'Fernández', 'correo': 'carla.fernandez@gmail.com', 'edad': 24},
+    {'nombre': 'Sofía', 'apellido': 'Hernández', 'correo': 'sofia.hernandez@gmail.com', 'edad': 20},
+    {'nombre': 'Daniel', 'apellido': 'Ruiz', 'correo': 'daniel.ruiz@gmail.com', 'edad': 25},
+    {'nombre': 'Lucía', 'apellido': 'Ramírez', 'correo': 'lucia.ramirez@gmail.com', 'edad': 18},
+    {'nombre': 'Fernando', 'apellido': 'Castro', 'correo': 'fernando.castro@gmail.com', 'edad': 22},
+    {'nombre': 'Paula', 'apellido': 'Ortiz', 'correo': 'paula.ortiz@gmail.com', 'edad': 21},
+    {'nombre': 'Jorge', 'apellido': 'Silva', 'correo': 'jorge.silva@gmail.com', 'edad': 26},
+    {'nombre': 'Valeria', 'apellido': 'Moreno', 'correo': 'valeria.moreno@gmail.com', 'edad': 19},
+    {'nombre': 'Ignacio', 'apellido': 'Vega', 'correo': 'ignacio.vega@gmail.com', 'edad': 24},
+    {'nombre': 'Camila', 'apellido': 'Díaz', 'correo': 'camila.diaz@gmail.com', 'edad': 23},
+    {'nombre': 'Héctor', 'apellido': 'Cruz', 'correo': 'hector.cruz@gmail.com', 'edad': 27},
+    {'nombre': 'Mónica', 'apellido': 'Navarro', 'correo': 'monica.navarro@gmail.com', 'edad': 22},
+    {'nombre': 'Gabriel', 'apellido': 'Reyes', 'correo': 'gabriel.reyes@gmail.com', 'edad': 21},
+    {'nombre': 'Elena', 'apellido': 'Torres', 'correo': 'elena.torres@gmail.com', 'edad': 20},
+    {'nombre': 'Ramiro', 'apellido': 'García', 'correo': 'ramiro.garcia@gmail.com', 'edad': 25},
+]
+
+for data in estudiantes:
+    Estudiante.objects.create(**data)
+
+print("Datos ingresados con éxito.")
